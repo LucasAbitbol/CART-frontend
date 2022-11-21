@@ -26,7 +26,7 @@ function MainForm() {
         if (data.email === "bastien.dubois@gmail.com") {
             if (data.password === "1234") {
                 localStorage.setItem("id", "patientGroupeMarisolLucas")
-                window.location.replace(`http://localhost:3000/profil`)
+                window.location.replace(`http://localhost:3000/anciennesData`)
             } else {
                 ReactDOM.render(
                     <p>Email et/ou mot de passe incorrect</p>,

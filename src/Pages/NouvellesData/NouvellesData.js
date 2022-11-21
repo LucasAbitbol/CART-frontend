@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
-import './Historique.css';
-import logo from '../../logo.png'
+import './NouvellesData.css';
+import logo from '../../logo.png';
+import Navbar from '../Navbar/Navbar';
 
-function DonneesVitales() {
+function NouvellesData() {
 
     const url="https://fhir.alliance4u.io/api/diagnostic-report?subject.reference=patientGroupeMarisolLucas"
     const [diagnostics, setDiagnostics] = useState([]);
@@ -44,22 +45,9 @@ function DonneesVitales() {
 
     return (
         <div className="historique">
-            <ul id="navbar">
-                <li >
-                    <a href="./profil">Mon Profil</a>
-                </li>
-                <li>
-                    <a href="./dashboard">Envoyer ma demande de diagnostic</a>
-                </li>
-                <li id="active">
-                    <a href="#">Diagnostics</a>
-                </li>
-                <li >
-                    <a href="./donneesVitales">Évolutions</a>
-                </li>
-            </ul>
-            <a href="./profil"><img id="logo" src={logo} alt="logo"/></a>
-            <h1>Historique des diagnostics reçus</h1>
+            <Navbar />
+            <a href="./anciennesData"><img id="logo" src={logo} alt="logo"/></a>
+            <h1>Nouvelles données à enregistrer</h1>
             <table id="historique">
                 <tr id="titre">
                     <th>Médecin</th>
@@ -85,4 +73,4 @@ function DonneesVitales() {
     );
 }
 
-export default DonneesVitales;
+export default NouvellesData;
