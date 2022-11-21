@@ -1,0 +1,68 @@
+#groupe1, #groupe2{
+    transition: 1s
+}
+
+#groupe2, #groupe3, #groupe4{
+    opacity: 0;
+}
+
+.diagnostic{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fautes{
+    position: fixed;
+    bottom: 50px;
+    left: 4vw;
+}
+
+.pasDrole{
+    position: fixed;
+    bottom: 50px;
+    right: 4vw;
+}
+
+.fautes h2{
+    color: #df4759 !important;
+}
+
+.fautes h2:first-child{
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.diagnostic h1{
+    font-size: 3em;
+    margin-top: 20vh;
+}
+
+.diagnostic h2{
+    width: 100%;
+    color: #016D77;
+}
+
+.group{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.group div{
+    width: 20%;
+}
+
+.buttonDiagnostic{
+    font-size: 12pt !important;
+    width: 100% !important;
+    padding: 40px !important;
+}
+
+#groupe4 h1{
+    margin-top: 0;
+}

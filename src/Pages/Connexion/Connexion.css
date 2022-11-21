@@ -1,0 +1,54 @@
+.bodyMain{
+    width: 50%;
+    margin-top: 20vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.formConnexion{
+    background-color: #016D77;
+    width: 100%;
+}
+
+.formConnexion{
+    width: 100%;
+    background: #016D77;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.formConnexion input{
+    border-radius: 2rem;
+    width: 100%;
+    padding: 1em;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    color: #3c354e;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#WrongLogin {
+    color :#df4759;
+    font-weight: bolder;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#buttonContainer a{
+    text-decoration: none;
+    color: #EBF5F7;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#buttonContainer a:hover{
+    text-decoration: underline;
+}

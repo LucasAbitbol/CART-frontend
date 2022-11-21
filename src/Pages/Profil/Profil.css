@@ -1,0 +1,127 @@
+.profil{
+    width: 80%;
+    margin-top: 20vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.zoneProfil{
+    display: flex;
+    justify-content: space-between;
+    background-color: #016D77;
+    border-radius: 2em;
+    padding: 50px;
+}
+
+.infoPerso{
+    min-width: 50% !important;
+    border-right: 10px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.champProfil p{
+    font-size: 1em;
+    text-align: left;
+    margin: 5px 0;
+    color: #EBF5F7;
+}
+
+.first{
+    margin-top: 0 !important;
+}
+
+.champProfil {
+    width: 40%;
+    margin-top: 5vh;
+}
+
+.champProfil p:first-child {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.boutons{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttonDelete{
+    width: 45%;
+    padding: 1rem;
+    background-color: #df4759;
+}
+
+#deconnexion{
+    width: 45%;
+    padding: 1rem;
+}
+
+#buttonDelete:hover{
+    background-color: #EBF5F7;
+    color: #df4759;
+    border-color: #df4759;
+}
+
+.diagnostic{
+    width: 50%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagnostic button{
+    font-size: 18pt;
+    width: 50%;
+    padding: 50px;
+}
+ul#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top : 20px;
+    right : 12%;
+    font-size: 20pt;
+}
+
+ul#navbar li {
+    float: left;
+}
+
+ul#navbar li a {
+    display: block;
+    color: #016D77;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s
+}
+
+ul#navbar li a:hover {
+    color: #7ca8d4;
+    font-weight: bold;
+}
+
+ul#navbar li#active a{
+    color: #c0c0c0;
+}
+
+ul#navbar li#active a:hover{
+    color: #c0c0c0;
+    font-weight: normal;
+}
+
+ul#navbar img#notification{
+    width: 6%;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
