@@ -47,7 +47,10 @@ function NouvellesData() {
         <div className="historique">
             <Navbar />
             <a href="./anciennesData"><img id="logo" src={logo} alt="logo"/></a>
-            <h1>Nouvelles données à enregistrer</h1>
+            <div id="topside">
+                <h1 id="texteTopside">Nouvelles données à enregistrer</h1>
+                <button id="ajout">Enregistrer les données</button>
+            </div>
             <table id="historique">
                 <tr id="titre">
                     <th>Médecin</th>
