@@ -17,7 +17,7 @@ function AnciennesData() {
                     method: 'GET',
                     mode: 'no-cors',
                     headers: {
-                        'Authorization': 'bearer lysVGgotgyMbyZVLac99PwbHpntOVL9FA3K3P1jFD+a19VfIDp8i2Q==',
+                        'Authorization': 'bearer MyToken',
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     }
