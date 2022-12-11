@@ -7,15 +7,23 @@ import Navbar from '../Navbar/Navbar';
 
 function NouvellesData() {
 
-    const url="https://fhir.alliance4u.io/api/diagnostic-report?subject.reference=patientGroupeMarisolLucas"
-    const [diagnostics, setDiagnostics] = useState([]);
+    const url="https://juno.orcatech.org/apis/orcatech/v0.9/items/"
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         const asyncFn = async () => {
             try {
-                let result = await fetch(url);
+                let result = await fetch(url, {
+                    method: 'GET',
+                    mode: 'no-cors',
+                    headers: {
+                        'Authorization': 'bearer lysVGgotgyMbyZVLac99PwbHpntOVL9FA3K3P1jFD+a19VfIDp8i2Q==',
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
                 result = await result.json();
-                setDiagnostics(result);
+                setData(result);
                 console.log(result);
             } catch {
                 console.log("Error")
@@ -23,25 +31,6 @@ function NouvellesData() {
         };
         asyncFn();
     }, []);
-
-
-    function myFunction() {
-        document.getElementById("notif2").style.display = "block";
-        document.getElementById("notif").style.display = "none";
-    }
-    function myFunction2() {
-        document.getElementById("notif").style.display = "block";
-        document.getElementById("notif2").style.display = "none";
-    }
-
-    function deleteDiagnostic(event, id) {
-        event.preventDefault();
-        Axios.delete("https://fhir.alliance4u.io/api/diagnostic-report/" + id)
-            .then(res=>{
-                console.log("Diagnostic supprimé")
-                window.location.replace(`http://localhost:3000/historique`)
-            })
-    }
 
     return (
         <div className="historique">
@@ -53,21 +42,16 @@ function NouvellesData() {
             </div>
             <table id="historique">
                 <tr id="titre">
-                    <th>Médecin</th>
-                    <th>Conclusion</th>
-                    <th>Suppression</th>
+                    <th>Pièce</th>
+                    <th>Capteur</th>
+                    <th>Date</th>
                 </tr>
 
-                {diagnostics.map((item, index) => (
+                {data.map((item, index) => (
                         <tr className="rowHistorique">
-                            <td>{item.resultsInterpreter[0].display}</td>
-                            <td>{item.conclusion}</td>
-                            <td>
-                                <button id="buttonDeleteObservation" onClick={(event) => {
-                                    deleteDiagnostic(event, item.id)}}>
-                                    Supprimer
-                                </button>
-                            </td>
+                            <td>{item.room[0].display}</td>
+                            <td>{item.sensor}</td>
+                            <td>{item.date}</td>
                         </tr>
                     )
                 )}
